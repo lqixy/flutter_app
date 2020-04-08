@@ -7,6 +7,7 @@ import 'demo/basic_demo.dart';
 import 'demo/view_demo.dart';
 import 'demo/sliver_demo.dart';
 import 'demo/navigator_demo.dart';
+import 'demo/form_demo.dart';
 
 void main() => runApp(App());
 
@@ -20,16 +21,20 @@ class App extends StatelessWidget {
       // home: NavigatorDemo(),
 
       //初始路由
-      initialRoute: '/',
+      initialRoute: '/form',
 
       routes: {
-        '/':(context)=>Home(),
-        '/about':(context)=>Page(title: 'Hello About',)
+        '/': (context) => Home(),
+        '/about': (context) => Page(
+              title: 'Hello About',
+            ),
+        '/form': (context) => FormDemo()
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-          splashColor: Colors.white70),
+          splashColor: Colors.white70,
+          accentColor: Color.fromRGBO(3, 54, 255, 1)),
     );
   }
 }
@@ -65,7 +70,7 @@ class Home extends StatelessWidget {
                 Tab(
                   icon: Icon(Icons.directions_bike),
                 ),
-                 Tab(
+                Tab(
                   icon: Icon(Icons.view_quilt),
                 )
               ],
