@@ -4,6 +4,10 @@ class FormDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('FormDemo'),
+        elevation: 0,
+      ),
       body: Theme(
         //Theme.of(context).copyWith(xx) 只改变(xxx)
         data: Theme.of(context).copyWith(primaryColor: Colors.black),
@@ -48,7 +52,7 @@ class _RegisterFormState extends State<RegisterForm> {
 
       //底部弹出对话框
       Scaffold.of(context).showSnackBar(SnackBar(
-        content:Text('Registering'),
+        content: Text('Registering'),
       ));
     } else {
       //打开自动验证
