@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/demo/alert_dialog_demo.dart';
 import 'package:my_app/demo/bottom_sheet_demo.dart';
+import 'package:my_app/demo/card_demo.dart';
 import 'package:my_app/demo/chip_demo.dart';
 import 'package:my_app/demo/data_table_demo.dart';
 import 'package:my_app/demo/datetime_demo.dart';
 import 'package:my_app/demo/expansion_panel_demo.dart';
+import 'package:my_app/demo/paginated_data_table_demo.dart';
 import 'package:my_app/demo/simple_dialog_demo.dart';
 import 'package:my_app/demo/snack_bar_demo.dart';
+import 'package:my_app/demo/stepper_demo.dart';
 import '../demo/button_demo.dart';
 import '../demo/floating_action_button_demo.dart';
 import '../demo/popup_menu_button_demo.dart';
@@ -26,6 +29,21 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'Stepper',
+            subtitle: '步骤',
+            page: StepperDemo(),
+          ),
+          ListItem(
+            title: 'Card',
+            subtitle: '卡片',
+            page: CardDemo(),
+          ),
+          ListItem(
+            title: 'PaginatedDataTable',
+            subtitle: '分页图表',
+            page: PaginatedDataTableDemo(),
+          ),
           ListItem(
             title: 'DataTable',
             subtitle: '图表',
