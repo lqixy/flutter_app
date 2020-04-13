@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/demo/stream/stream_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/listview_demo.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
@@ -23,7 +24,7 @@ class App extends StatelessWidget {
       // home: NavigatorDemo(),
 
       //初始路由
-      initialRoute: '/state-management',
+      initialRoute: '/stream',
 
       routes: {
         '/': (context) => Home(),
@@ -32,7 +33,8 @@ class App extends StatelessWidget {
             ),
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
-        '/state-management': (context) => StateManagementDemo()
+        '/state-management': (context) => StateManagementDemo(),
+        '/stream':(context)=>StreamDemo()
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
