@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/demo/bloc/bloc_demo.dart';
 import 'package:my_app/demo/rxdart/rxdart_demo.dart';
 import 'package:my_app/demo/stream/stream_demo.dart';
 import 'demo/layout_demo.dart';
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
       // home: NavigatorDemo(),
 
       //初始路由
-      initialRoute: '/rxdart',
+      initialRoute: '/bloc',
 
       routes: {
         '/': (context) => Home(),
@@ -36,7 +37,8 @@ class App extends StatelessWidget {
         '/mdc': (context) => MaterialComponents(),
         '/state-management': (context) => StateManagementDemo(),
         '/stream': (context) => StreamDemo(),
-        '/rxdart': (context) => RxDartDemo()
+        '/rxdart': (context) => RxDartDemo(),
+        '/bloc': (context) => BlocDemo()
       },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
